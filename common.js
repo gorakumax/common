@@ -20,18 +20,6 @@ function toggleNav() {
     document.getElementById('menu-trigger').classList.toggle('open');
 }
 /* SNSシェアボタンを有効化する関数 */
-/*
- function shareX() {
-  const url = encodeURIComponent(window.location.href);
-  const title = encodeURIComponent(document.title);
-  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank');
-}
-
-function shareFB() {
-  const url = encodeURIComponent(window.location.href);
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-}
-*/
 function shareX() {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
