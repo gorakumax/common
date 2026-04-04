@@ -94,21 +94,22 @@ footer .nav-list li {
 #side-nav {
     position: fixed;
     top: 0;
-    right: -250px; /* leftからrightに変更。マイナス値で画面の外（右）へ */
-    left: auto;    /* leftの設定を解除 */
+    right: -250px;
     width: 250px;
-    height: 100%;
+    
+    /* --- ここが重要 --- */
+    height: 100vh;           /* 高さを画面ぴったりに固定 */
+    box-sizing: border-box;  /* paddingを高さに含める設定 */
+    padding-top: 70px;       /* 上の余白 */
+    padding-bottom: 20px;    /* 下が切れないように少し余白を追加 */
+    /* ------------------ */
+
     background: #fff;
     z-index: 10000;
     transition: 0.3s;
-    padding-top: 70px;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.2); /* 影を左側に出す */
-    /* --- ここから追記 --- */
-    overflow-y: auto;       /* 縦にはみ出た分をスクロール可能にする */
-    max-height: 100vh;      /* メニューの高さを画面内に収める */
-    /* ------------------ */
+    overflow-y: auto;        /* はみ出た分をスクロール */
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
 }
-
 /* JSで開いた時に右端にぴったり合わせる */
 #side-nav.open {
     right: 0;
