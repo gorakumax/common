@@ -55,11 +55,19 @@ footer .nav-list {
 footer .nav-list li {
     font-size: 12px;
 }
-/* --- サイドナビ用の設定（縦並び・スマホ向け） --- */
+/* --- サイドナビ用の設定（縦並び・スマホ向け） --- 
+#side-nav .nav-list {*/
+   /*display: block;          縦に積む */
+   /* padding: 0px;           ナビ全体の余白 */
+   /* flex-grow: 1;           余ったスペースを埋める（これで下の要素を押し下げる） */
+/*}*/
+
+/* リスト自体の余白をリセット */
 #side-nav .nav-list {
-    display: block;          /* 縦に積む */
-    padding: 0px;           /*ナビ全体の余白 */
-    flex-grow: 1;            /* 余ったスペースを埋める（これで下の要素を押し下げる） */
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 #side-nav .nav-list li {
@@ -67,11 +75,21 @@ footer .nav-list li {
    /*  border-bottom: 1px solid #eee; 下線を入れると見やすい */
     /* padding-bottom: 10px; */
 }
-
+ /*
 #side-nav .nav-list li a {
-    color: #333;             /* サイドナビ内は落ち着いた色にする場合 */
+    color: #333;             サイドナビ内は落ち着いた色にする場合 
     font-weight: bold;
+}*/
+/* 各行の間隔を調整 */
+#side-nav .nav-list li a {
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 8px 15px; /* 上下を8px、左右を15pxに設定（もっと詰めたいなら 4px 15px などに） */
+    text-decoration: none;
+    line-height: 1.2;  /* 文字自体の高さを少し低くする */
 }
+
 /* --- 追従メニュー用の追加CSS --- */
 /* --- 右上配置用：追従メニュー --- */
 
