@@ -85,7 +85,7 @@ footer .nav-list li {
     color: #333;
     font-weight: bold;
     display: block;
-    padding: 15px 15px; /* 上下を8px、左右を15pxに設定（もっと詰めたいなら 4px 15px などに） */
+    padding: 12px 15px; /* 上下を8px、左右を15pxに設定（もっと詰めたいなら 4px 15px などに） */
     text-decoration: none;
     line-height: 1.2;  /* 文字自体の高さを少し低くする */
 }
