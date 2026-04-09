@@ -9,3 +9,43 @@
 
    </body>
 </html>
+
+
+
+
+<!--サイドメニュータグ-->
+   <div id="menu-trigger" onclick="toggleNav()">
+    <span></span>
+    <span class="menu-text">Menu</span>
+    <span></span>
+</div>
+<nav id="side-nav">
+    <div data-include="topmenubar.html"></div>
+</nav>
+<div id="nav-overlay" onclick="toggleNav()"></div>
+<!--ここまで-->
+
+
+<!-- 基本テンプレ -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/style.css">
+	<script src="/common/common.js" defer></script>
+	<!-- PWA用マニフェストの読み込み -->
+	<link rel="manifest" href="manifest.json">
+	<!-- PWA用サービスワーカーの登録 -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js');
+		}
+	</script>
+<!-- 基本テンプレここまで -->
+
+
+<!--フッターテンプレ-->
+<footer>
+ <!--   <nav>
+        <div data-include="/common/menubar.html" class="nav-list">更新情報取得中</div>
+    </nav>-->
+    <div data-include="signe.html" class="signe">更新情報取得中</div>
+</footer>
+<!--フッターテンプレここまで-->
